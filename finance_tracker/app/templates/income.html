@@ -1,0 +1,13 @@
+<h2>Income</h2>
+<form ng-submit="addIncome()">
+    <label for="incomeDesc">Description:</label>
+    <input type="text" id="incomeDesc" ng-model="income.description" required>
+    <label for="incomeAmt">Amount:</label>
+    <input type="number" id="incomeAmt" ng-model="income.amount" required>
+    <button type="submit">Add Income</button>
+</form>
+<ul>
+    <li ng-repeat="income in incomes">
+        {{ income.description }} - {{ income.amount | currency }}
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+<h2>Expenses</h2>
+<form ng-submit="addExpense()">
+    <label for="expenseDesc">Description:</label>
+    <input type="text" id="expenseDesc" ng-model="expense.description" required>
+    <label for="expenseAmt">Amount:</label>
+    <input type="number" id="expenseAmt" ng-model="expense.amount" required>
+    <button type="submit">Add Expense</button>
+</form>
+<ul>
+    <li ng-repeat="expense in expenses">
+        {{ expense.description }} - {{ expense.amount | currency }}
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
